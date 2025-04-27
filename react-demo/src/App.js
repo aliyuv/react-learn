@@ -1,10 +1,10 @@
-const Demo01 = () => {
+const Demo01 = (props) => {
     return React.createElement(
         'div',
         {},
         [
-            React.createElement('h1', {}, '你好世界，欢迎学习react内容'),
-            React.createElement('p', {}, '我是一名菜鸡 react use people')
+            React.createElement('h1', {}, props.name),
+            React.createElement('p', {}, props.description)
         ]
     )
 }
@@ -12,10 +12,22 @@ const Demo01 = () => {
 const App = () => {
     return React.createElement('div', {}, [
         React.createElement('div', {}, '这里是主页组件'),
-        React.createElement(Demo01),
-        React.createElement(Demo01),
-        React.createElement(Demo01),
-        React.createElement(Demo01)
+        React.createElement(Demo01, {
+            name: '你好世界',
+            description: '这是一条描述信息'
+        }),
+        React.createElement(Demo01, {
+            name: '你好世界',
+            description: '这是一条描述信息'
+        }),
+        React.createElement(Demo01, {
+            name: "The Hawaiian Pizza",
+            description: "Sliced Ham, Pineapple, Mozzarella Cheese",
+        }),
+        React.createElement(Demo01, {
+            name: "The Hawaiian Pizza",
+            description: "Sliced Ham, Pineapple, Mozzarella Cheese",
+        })
     ])
 }
 
