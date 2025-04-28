@@ -31,4 +31,6 @@ yarn-error.log*
 
 # 操作系统
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+**/node_modules/ 
